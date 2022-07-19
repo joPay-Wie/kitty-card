@@ -8,7 +8,7 @@ body{
 }
 
 .gatita{
-    font-size: 2rem;
+    font-size: 2.25rem;
     background-color: #477690;
     display: flex;
     cursor: pointer;
@@ -50,19 +50,36 @@ body{
 }
 
 .gatita:hover .text{
-    transform: translateY(-60%);
+    transform: translateY(-70%);
+}
+
+.kitty{
+    letter-spacing: .2em;
+}
+
+.gatita:hover .kitty{
+    transform: translateY(-20%);
     color: #34576a;
 }
 
 .paragraph {
-    font-size: 16px;
+    font-size: 20px;
     display: none;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 .gatita:hover .paragraph{
-    display: inline-block;
+    display: block;
     color: #001724;
+    animation: fadeIn 1s;
+    transform: translateY(-30%);
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 
